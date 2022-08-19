@@ -1,0 +1,11 @@
+name: Backend DEV
+on:
+    workflow_dispatch:
+jobs:
+    deploy:
+        runs-on: self-hosted
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Set envs and setup
+              run: source ~/setup.sh
